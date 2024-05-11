@@ -1,0 +1,492 @@
+body {
+  background-image: linear-gradient(#3f006c, #750050, #b10042, #da4837, #f7bb38);
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+  animation: colors 20s infinite forwards;
+}
+
+@keyframes colors {
+  0%, 10% {
+    background: linear-gradient(#3f006c, #750050,
+    #b10042, #da4837, #f7bb38);
+  }
+  53% {
+    background: linear-gradient(#14045f, #331a99,
+    #282bce, #1555ec, #1e84f7);
+  }
+  98% {
+    background: linear-gradient(#3f006c, #750050,
+    #b10042, #da4837, #f7bb38);
+  }
+  100% {
+    background: linear-gradient(#3f006c, #750050,
+    #b10042, #da4837, #f7bb38);
+  }
+}
+
+#navbar {
+  background-color: #0c1330;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 46px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.head:hover {
+  opacity: 0.5;
+  background-color: black;
+}
+.head {
+  display: flex;
+  align-items: center;
+  height: 46px;
+}
+
+
+#navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  padding-right: 22px;
+  padding-left: 22px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif
+}
+h1 {
+  color: white;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.border {
+  z-index: 101;
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+}
+
+.ray1 {
+  height: 80px;
+  width: 1em;
+  border-bottom: 20em solid rgba(255,255,255,0.1);
+  border-left: 3em solid transparent;
+  border-right: 3em solid transparent;
+  position: absolute;
+  transform: rotate(130deg);
+  bottom: -3em;
+  right: 6em;
+}
+
+.ray2 {
+  height: 60px;
+  width: 1em;
+  border-bottom: 20em solid rgba(255,255,255,0.1);
+  border-left: 2.4em solid transparent;
+  border-right: 2.4em solid transparent;
+  position: absolute;
+  transform: rotate(80deg);
+  right: 12em;
+  top: -6em;
+}
+
+.ray3 {
+  height: 60px;
+  width: 2em;
+  border-bottom: 20em solid rgba(255,255,255,0.1);
+  border-left: 2.4em solid transparent;
+  border-right: 2.4em solid transparent;
+  position: absolute;
+  transform: rotate(240deg);
+  left: 8em;
+  bottom: -3em;
+}
+
+.ray4 {
+  height: 72px;
+  width: 1em;
+  border-bottom: 20em solid rgba(255,255,255,0.1);
+  border-left: 1.2em solid transparent;
+  border-right: 1.2em solid transparent;
+  position: absolute;
+  transform: rotate(300deg);
+  left: 10em;
+  top: -4em;
+}
+
+.stars {
+  height: 0.25em;
+  width: 0.25em;
+  background-color: white;
+  position: absolute;
+  top: 3.7em;
+  left: 9.3em;
+  border-radius: 50%;
+  box-shadow: 3em 9.3em white, 
+  -5em 15em 0 0.1em white, 
+  8em 25em white,
+  -15em -10em white,
+  20em 30em 0 0.1em white,
+  15em 16em white,
+  40em 30em white,
+  50em 25em white,
+  70em 20em white,
+  35em 22em white,
+  70em 10em 0 0.05em white,
+  75em 0 30em white,
+  70em 40em white,
+  10em 40em white,
+  42em 40em white,
+  -2em 37em white,
+  60em 35em 0 0.1em white,
+  55em 5em white,
+  80em 2em white,
+  30em 0 20em white,
+  55em 15em white,
+  55em 40em 0 0.05em white,
+  70em 70em white,
+  74em 90em white,
+  77em 120em 0 0.0125em white,
+  72em 140em 0 0.0125em white,
+  75em 150em 0 0.0125em white,
+  40em 155em 0 0.0125em white,
+  10em 145em 0 0.0125em white,
+  0em 150em 0 0.0125em white,
+  -5em 140em 0 0.0125em white,
+  8em 128em 0 0.0125em white,
+  5em 75em 0 0.0125em white,
+  10em 90em 0 0.0125em white,
+  60em 125em 0 0.0125em white,
+  0em 110em 0 0.0125em white,
+  25em 105em white,
+  48em 109em 0 0.0125em white,
+  70em 100em 0 0.05em white,
+  0em 60em 0 0.0125em white,
+  25em 66em 0 0.0125em white,
+  45em 62em 0 0.05em white,
+  65em 52em 0 0.0125em white,
+  75em 60em 0 0.0125em white;
+  animation: twinkle 20s infinite;
+}
+
+.stars, .glow {
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  53% {
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.glow {
+  width: 100vw; 
+  height: 100vh; 
+  height: 50em;
+  width: 50em;
+  position: fixed;
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  left: 20em;
+  bottom: -35em;
+  animation: float 5s infinite;
+}
+
+.glow:before,
+.glow:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+}
+
+.glow:before {
+  height: 50em;
+  width: 50em;
+  left: 35em;
+  top: -4.5em;
+}
+
+.glow:after {
+  height: 60em;
+  width: 60em;
+  right: 35em;
+  bottom: -3em;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2100px;
+  padding-top: 200px;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(0.75em);
+  }
+}
+
+@keyframes moonVisibility {
+  0%, 20%, 80%, 100% {
+    opacity: 0; 
+  }
+  45%, 55% {
+    opacity: 1; 
+  }
+}
+
+@keyframes sunVisibility {
+  0%, 20%, 80%, 100% {
+    opacity: 1; 
+  }
+  30%, 70% {
+    opacity: 0; 
+  }
+}
+
+.sun {
+  margin-top: -30%;
+  background-color: #f7f7de;
+  height: 7.5em;
+  width: 7.5em;
+  border-radius: 50%;
+  position: absolute;
+  animation: sunVisibility 20s infinite forwards;
+}
+
+.sun:before,
+.sun:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.sun:before {
+  height: 15em;
+  width: 15em;
+  right: -3.75em;
+  top: -3.75em;
+}
+
+.sun:after {
+  height: 25em;
+  width: 25em;
+  right: -8.8em;
+  bottom: -8.7em;
+}
+
+.moon { 
+  margin-top: 40%;
+  height: 7.5em;
+  width: 7.5em;
+  border-radius: 50%;
+  box-shadow: 2.5em -2.5em 0 0 #f7f7de;
+  position: absolute;
+  animation: moonVisibility 20s infinite forwards;
+}
+
+.moon:before,
+.moon:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.moon:before {
+  height: 15em;
+  width: 15em;
+  right: -6.3em;
+  bottom: -1em;
+}
+
+.moon:after {
+  height: 25em;
+  width: 25em;
+  right: -11.29em;
+  bottom: -6em;
+}
+
+.spinner {
+  width: 100vw; 
+  height: 100vh; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  animation:  spin 20s infinite forwards;
+}
+@keyframes spin {
+  10% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(180deg);
+  }
+  55% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#project, #about, #contact {
+  font-family: Protest Riot;
+  z-index: 100;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  height: 500px;
+  width: 500px;
+  background-color: rgb(246, 215, 195);
+  margin-bottom: 50px;
+  border-radius: 100%;
+  animation: float 5s infinite;
+}
+
+.para {
+  margin-top: 40px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.text-in {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Protest Riot;
+  color: black;
+  font-size: 36px;
+  font-weight: 400;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.text-about {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Protest Riot;
+  color: black;
+  font-size: 36px;
+  font-weight: 400;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.contact1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.pic1 {
+  height: 65px;
+  width: 65px;
+}
+
+.copyright {
+  font-family: Protest Riot;
+  color: black;
+  font-size: 20px;
+}
+
+
+.insta, .discord, .linkedin, .github {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.insta:hover,.discord:hover,.linkedin:hover, .github:hover {
+  opacity: 0.5;
+}
+
+
+.contact-text {
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+@media(max-width: 750px) {
+  #project, #about, #contact {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+
+#project-link, #about-link, #contact-link {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 20px;
+  border: 3px solid transparent; 
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.05); 
+  border-color: #f7bb38; 
+}
+
+.project-image {
+  width: 100%; 
+  max-width: 180px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+.project-description {
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+}
